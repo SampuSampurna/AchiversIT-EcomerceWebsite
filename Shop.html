@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shope</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            /* to avoid extra spacing in the body*/
+            font-family: sans-serif;
+        }
+
+        .container-aboveheader {
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            background-color: rgb(200, 212, 200);
+            padding: 8px;
+            text-align: center;
+            border-bottom: 2px solid darkcyan;
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: 9% 37% 54%;
+            margin: 0;
+            padding: 0 50px;
+            align-items: center;
+        }
+
+        .linksinheader {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .linksinheader a {
+            text-decoration: none;
+            color: black;
+        }
+        .linksinheader  a:active{
+            color: rgb(51, 153, 156);
+        }
+
+
+        .search-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 53%;
+            border: 2px solid lightgrey;
+
+        }
+
+        .search-container input {
+            width: calc(100% - 50px);
+            /* Adjust width to leave space for the image */
+
+            box-sizing: border-box;
+            height: 38px;
+            border: none;
+            /* Remove border */
+            outline: none;
+            /* Remove outline */
+        }
+
+        .search-container img {
+            position: absolute;
+            right: 30px;
+            height: 20px;
+            /* Adjust height as needed */
+            width: auto;
+            /* Maintain aspect ratio */
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-right: 4%;
+        }
+
+        .icons .icons-header {
+            height: 24px;
+            width: 24px;
+            padding: 0 9px;
+        }
+
+        .footer-topcontainer {
+            display: grid;
+            grid-template-columns: 35% 30% 35%;
+            background-color: rgb(165, 216, 198);
+            padding: 19px 50px;
+        }
+
+        .mail-container {
+            display: grid;
+            grid-template-columns: 10% 90%;
+        }
+
+        #email-input {
+            padding: 12px 124px 12px 25px;
+
+            border: none;
+
+        }
+
+        #subscribe-btn {
+            padding: 10px 32px;
+            background-color: black;
+            color: white;
+        }
+
+        .footer-maincontainer {
+            display: grid;
+            grid-template-columns: 37% 17% 17% 29%;
+            /* adjast these container by changing the percentages*/
+            padding: 0 50px;
+            margin-top: 28px;
+            ;
+        }
+
+        .social-media-container {
+            display: flex;
+
+
+        }
+
+        .social-media-container img {
+            height: 20px;
+            width: 20px;
+            margin-top: -8px;
+        }
+
+        .shop-productimage {
+            width: 297px;
+            height: 255px;
+            border-radius: 22px;
+        }
+
+        .shop-productscontainer {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px
+        }
+
+        .shop-maincontainer {
+            padding: 50px;
+        }
+
+        .shop-individualproduct {
+            padding: 50px;
+            border: 1px solid lightgray;
+            padding: 15px;
+            border-radius: 22px;
+        }
+
+        .shop-price {
+            color: rgb(17, 153, 123);
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .shop-discountprice {
+            color: lightslategrey;
+            text-decoration: line-through;
+            font-size: 15px;
+        }
+
+        #active-button {
+            background-color: darkcyan;
+            color: white;
+
+        }
+
+        .shop-button {
+            border-radius: 4px;
+            border: none;
+            margin: 13px 4px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        .shop-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+
+        .ratings-color {
+            color: orange;
+        }
+
+        @media only screen and (min-width: 245px) and (max-width: 1024px) {
+            body {
+                width: 400%;
+            }
+
+            .footer-topcontainer {
+                grid-template-columns: 25% 30% 45%;
+            }
+
+            .shop-productscontainer {
+
+                grid-template-columns: repeat(3, 1fr);
+
+            }
+
+            .shop-productimage {
+                width: 340px;
+                height: 278px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container-aboveheader">
+        <section>(+01)-2345-6789 <span style="margin-left: 15px;"> Our location</span></section>
+        <section>Super Value Deals-Save more coupons</section>
+        <section>Log In/Sign Up</section>
+    </section>
+    <header>
+        <section>
+            <img src="./img/logo.png" alt="logo" height="70px" width="100px">
+        </section>
+        <section>
+            <nav>
+                <ul class="linksinheader">
+                    <li><a href="index.html" target="_self">Home</a></li>
+                    <li><a href="Shop.html" target="_self" style="color: rgb(51, 153, 156);">Shop</a></li>
+                    <li><a style="margin-left: -19%;" href="Account.html" target="_self">My Account</a></li>
+                    <li><a href="Compare.html" target="_self">Compare</a></li>
+                    <li><a href="Login-Register.html" target="_self">Login</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="icons">
+            <div class="search-container">
+                <input type="search" placeholder="Search For Items...">
+                <img src="./img/search.png" alt="search icon" />
+            </div>
+            <img src="./img/icon-heart.svg" class="icons-header" alt="heart-icon" />
+            <img src="./img/icon-cart.svg" class="icons-header" alt="cart-icon" />
+        </section>
+    </header>
+    <main>
+        <section class="shop-maincontainer">
+            <p>We found <span style="color: rgb(37, 112, 115);"> 688 </span> items for you!</p>
+            <section class="shop-productscontainer">
+                <section class="shop-individualproduct">
+                    <img src="./img/product-1-1.jpg" alt="shirt-image" class="shop-productimage" />
+                    <p style="color: lightslategrey">clothing</p>
+                    <h4>Colorful Pattern Shirts</h4>
+                    <i class="fa-regular fa-star ratings-color"></i> <!--this is for rating icons -->
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span></p>
+
+                </section>
+                <section class="shop-individualproduct"><img src="./img/product-2-1.jpg" alt="shirt-image"
+                        class="shop-productimage" />
+                    <p style="color: lightslategrey">clothing</p>
+                    <h4>Colorful Pattern Shirts</h4>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span></p>
+                    <!--this if for discount and actual price -->
+                </section>
+                <section class="shop-individualproduct"><img src="./img/product-3-1.jpg" alt="shoe0image"
+                        class="shop-productimage" />
+                    <p style="color: lightslategrey">clothing</p>
+                    <h4>Colorful Pattern Shirts</h4>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span></p>
+                </section>
+                <section class="shop-individualproduct"><img src="./img/product-4-1.jpg" alt="pant-image"
+                        class="shop-productimage" />
+                    <p style="color: lightslategrey">clothing</p>
+                    <h4>Colorful Pattern Shirts</h4>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span></p>
+                </section>
+                <section class="shop-individualproduct"><img src="./img/product-5-1.jpg" alt="pant-image"
+                        class="shop-productimage" />
+                    <p style="color: lightslategrey">clothing</p>
+                    <h4>Colorful Pattern Shirts</h4>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span></p>
+                </section>
+                <section class="shop-individualproduct"><img src="./img/product-6-1.jpg" alt="pant-image"
+                        class="shop-productimage" />
+                    <p style="color: lightslategrey">clothing</p>
+                    <h4>Colorful Pattern Shirts</h4>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span></p>
+                </section>
+                <section class="shop-individualproduct"><img src="./img/product-7-1.jpg" alt="pant-image"
+                        class="shop-productimage" />
+                    <p style="color: lightslategrey">clothing</p>
+                    <h4>Colorful Pattern Shirts</h4>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span></p>
+                </section>
+                <section class="shop-individualproduct"><img src="./img/product-8-1.jpg" alt="pant-image"
+                        class="shop-productimage" />
+                    <p style="color: lightslategrey">clothing</p>
+                    <h4>Colorful Pattern Shirts</h4>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span></p>
+                </section>
+                <section class="shop-individualproduct"><img src="./img/product-9-1.jpg" alt="pant-image"
+                        class="shop-productimage" />
+                    <p style="color: lightslategrey">clothing</p>
+                    <h4>Colorful Pattern Shirts</h4>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span></p>
+                </section>
+                <section class="shop-individualproduct"><img src="./img/product-10-1.jpg" alt="pant-image"
+                        class="shop-productimage" />
+                    <p style="color: lightslategrey">clothing</p>
+                    <h4>Colorful Pattern Shirts</h4>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span></p>
+                </section>
+                <section class="shop-individualproduct"><img src="./img/product-11-1.jpg" alt="pant-image"
+                        class="shop-productimage" />
+                    <p style="color: lightslategrey">clothing</p>
+                    <h4>Colorful Pattern Shirts</h4>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span></p>
+                </section>
+                <section class="shop-individualproduct"><img src="./img/product-12-1.jpg" alt="pant-image"
+                        class="shop-productimage" />
+                    <p style="color: lightslategrey">clothing</p>
+                    <h4>Colorful Pattern Shirts</h4>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <i class="fa-regular fa-star ratings-color"></i>
+                    <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span></p>
+                </section>
+            </section>
+            <section class="shop-buttons">
+                <!-- buttons-->
+                <button class="shop-button" id="active-button">01</button>
+                <button class="shop-button">02</button>
+                <button class="shop-button">03</button>
+                <button class="shop-button"> ... </button>
+                <button class="shop-button">16</button>
+                <button class="shop-button"> >> </button>
+
+
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <section class="footer-topcontainer">
+            <!-- this is for footer space-->
+            <section>
+                <section class="mail-container">
+                    <img src=".\img\icon-email.svg" alt="mail-icon" height="30px" width="30px"
+                        style="margin-top: 7px;" />
+                    <section style="padding-top: 12px;">Sign in to Newsletter</section>
+                </section>
+            </section>
+            <section style="padding-top: 12px;">...and receive $25 coupon for first shopping</section>
+            <section><input type="email" placeholder="Enter Your Email" id="email-input"><button
+                    id="subscribe-btn">Subscribe</button></section>
+        </section>
+        <section class="footer-maincontainer">
+            <section>
+                <img src="./img/logo.png" alt="logo" height="70px" width="100px">
+                <section>
+                    <p>Contact</p>
+                    <p><b>Address:</b>13 Hemcen Road, Street 32, Beb-Wahren</p>
+                    <p><b>Phone:</b>(+01) 2222 365 /(+91)01 2345 6789</p>
+                    <p><b>Hours:</b>10:00-18:00,Mon-Sat</p><br />
+                    <p>Follow Me</p>
+                    <section class="social-media-container">
+                        <!--socail media images -->
+                        <img src="./img/icon-facebook.svg" alt="facebook" />
+                        <img src="./img/icon-twitter.svg" alt="twitter" />
+                        <img src="./img/icon-instagram.svg" alt="instagram" />
+                        <img src="./img/icon-pinterest.svg" alt="pintrest" />
+                        <img src="./img/icon-youtube.svg" alt="youtube" />
+                    </section>
+                </section>
+            </section>
+
+            <section>
+
+                <h3>Address</h3>
+                <p>About Us</p>
+                <p>Delivery Information</p>
+                <p>Privacy Policy</p>
+                <p>Terms & Conditions</p>
+                <p>Contact Us</p>
+                <p>Support Center</p>
+            </section>
+
+            <section>
+                <h3>My Account</h3>
+                <p>Sign In</p>
+                <p>View Cart</p>
+                <p>My Wishlist</p>
+                <p>Track My Order</p>
+                <p>Help</p>
+                <p>Order</p>
+            </section>
+            <section>
+                <h3>Secured Payed Gateways</h3>
+
+                <img src="./img/payment-method.png" alt="payment-method" />
+
+            </section>
+
+        </section>
+
+
+    </footer>
+</body>
+
+</html>
